@@ -1,0 +1,47 @@
+{
+  "name": "iflow-openai-proxy",
+  "version": "1.0.0",
+  "description": "OpenAI-compatible API proxy server powered by iFlow CLI ACP",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "iflow-proxy": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/cli.js",
+    "dev": "ts-node src/cli.ts",
+    "clean": "rimraf dist",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "iflow",
+    "openai",
+    "proxy",
+    "api",
+    "ai",
+    "chat",
+    "streaming"
+  ],
+  "author": "",
+  "license": "MIT",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "dependencies": {
+    "@iflow-ai/iflow-cli-sdk": "^0.2.1",
+    "express": "^4.21.0",
+    "cors": "^2.8.5",
+    "uuid": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/cors": "^2.8.17",
+    "@types/uuid": "^10.0.0",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.0",
+    "ts-node": "^10.9.2",
+    "rimraf": "^6.0.0"
+  }
+}
